@@ -12,6 +12,7 @@
     - [4. Run the Project](#4-run-the-project)
   - [Visual Studio Code](#visual-studio-code)
     - [1. Starting a Flutter Application](#1-starting-a-flutter-application)
+  - [First program](#first-program)
   - [Note](#note)
 
 After installing Flutter in [01. Introduction & Setup](s/01.%20Introduction%20&%20Setup/), we can start creating our first Flutter application. There are two IDEs (Integrated Development Environments) that can be used to build a Flutter app: Android Studio and Visual Studio Code.
@@ -129,6 +130,22 @@ Once launched, the Android Virtual Device emulator will appear.
 To run the application, you can type `flutter run` in the terminal or press `Run` on the `main()` function. This will install the application on the Android device and display it on the screen.
 
 ![Alt text](images/app-vscode.png)
+
+## First Program
+
+Create a simple program by using `void main()` function as follows
+
+```dart
+import 'package:flutter/material.dart'; // Material Design package
+
+void main() {
+  runApp(MaterialApp(
+    home: Text("Hey MOBILE"),
+  ));
+}
+```
+
+To give a text on our MaterialApp, we need to use `Text()` widget. Run and see the result!
 
 ## Note
 
