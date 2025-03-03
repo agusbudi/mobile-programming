@@ -32,6 +32,22 @@ We can move on to setup the appbar and the body
 
 ## AppBar
 
-We use `appBar` property from Scaffold to setup our AppBar. The value of this `appBar` is an `AppBar` Widget. `AppBar` Widget has some properties like the following diagram.
+We use `appBar` property from Scaffold to setup our AppBar. The value of this `appBar` is an `AppBar` Widget. `AppBar` Widget has some properties like `title`, `leading`, `actions`, and more.
 
 ![Appbar](images/appbar.png)
+
+Let's try add AppBar and give title on the AppBar by adding title with a `Text` widget.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('my first app')
+      )
+    ),
+  ));
+}
+```
