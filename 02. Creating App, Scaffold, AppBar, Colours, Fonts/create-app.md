@@ -145,7 +145,8 @@ void main() {
 }
 ```
 
-To give a text on our MaterialApp, we need to use `Text()` widget. Run and see the result!
+We use `runApp` to run application with `MaterialApp` for using its Material Design.
+To give a text on our `MaterialApp`, we need to use `Text()` widget. Run and see the result!
 
 ## Note
 

@@ -5,3 +5,5 @@
 ## Content Outline
 
 ### [Creating a Flutter App](create-app.md)
+
+### [Scaffold & AppBar Widgets](scaffold.md)
