@@ -185,6 +185,7 @@ void main() {
     ),
     body: Center(child: Text("This is body")),
     floatingActionButton: FloatingActionButton(
+      onPressed: () { },
       child: Text('click'),
     ),
   )));
