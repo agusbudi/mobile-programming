@@ -8,6 +8,7 @@
   - [Scaffold](#scaffold)
     - [AppBar](#appbar)
     - [Body](#body)
+    - [Floating Action Button](#floating-action-button)
   - [Tips](#tips)
 
 With the Flutter application ready, we can start to make our application by using widgets. Prepare the program as follows to continue.
@@ -169,6 +170,26 @@ void main() {
 The end result should be as follows
 
 ![EndScaffold](images/end_scaffold.png)
+
+### Floating Action Button
+
+A Material Design floating action button. A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.
+
+```dart
+void main() {
+  runApp(MaterialApp(
+      home: Scaffold(
+    appBar: AppBar(
+      title: Text("My first app"),
+      centerTitle: true,
+    ),
+    body: Center(child: Text("This is body")),
+    floatingActionButton: FloatingActionButton(
+      child: Text('click'),
+    ),
+  )));
+}
+```
 
 ## Tips
 
