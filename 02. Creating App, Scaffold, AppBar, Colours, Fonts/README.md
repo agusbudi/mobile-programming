@@ -7,3 +7,5 @@
 ### [Creating a Flutter App](create-app.md)
 
 ### [Scaffold & AppBar Widgets](scaffold.md)
+
+### [Colors & Font](coloursfont.md)
