@@ -49,6 +49,10 @@ In Flutter, *state* refers to the data or information that a widget uses to dete
 
 ### Example: Counter App with StatefulWidget
 
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/662506e0-0ae1-4a7c-90d6-98ae919e77b0" width="300">
+</div>
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -116,6 +120,11 @@ Without state, apps would be static and unable to respond to user interactions. 
 Stateless widgets are widgets that do not change during their lifetime. They are immutable, meaning once created, their properties cannot be updated. These widgets are ideal for displaying *static content* that does not depend on user interactions or dynamic data.
 
 ### Example of a Stateless Widget:
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/182e0fec-6cd4-4bf3-908c-0c1cb4c3ac88" width="300">
+</div>
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -131,7 +140,11 @@ class MyStatelessWidget extends StatelessWidget {
   }
 }
 
-void main() => runApp(MyStatelessWidget());
+void main() {
+  runApp(MaterialApp(
+    home: MyStatelessWidget(),
+  ));
+}
 ```
 **Explanation**:
 - The text "Hello, World!" is static and will not change regardless of user actions.
@@ -142,6 +155,11 @@ void main() => runApp(MyStatelessWidget());
 Stateful widgets are widgets that can change their state during their lifecycle. They are mutable and allow the UI to update dynamically in response to user interactions, animations, or external events.
 
 ### Example of a Stateful Widget:
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/c2bb0269-97e6-430e-8bde-e1e029cafab8" width="300">
+</div>
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -206,6 +224,11 @@ Here are two examples of a simple app: one using a **Stateless Widget** and the 
 ---
 
 ### **Stateless Widget Example**
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/4a2d4b81-a13e-48c6-9b9a-de473acfe861" width="300">
+</div>
+
 This app displays a button and some text. The text does *not* change when the button is pressed because it’s static.
 
 ```dart
@@ -248,6 +271,11 @@ void main() => runApp(StatelessApp());
 ---
 
 ### **Stateful Widget Example**
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/cc8554c7-2978-454c-93ad-e82bf1e81a9f" width="300">
+</div>
+
 This app displays a button and some text. When the button is pressed, the text changes dynamically because it uses *state*.
 
 ```dart
