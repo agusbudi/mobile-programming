@@ -30,7 +30,7 @@ TextField(
 
 ### TextEditingController
 
-`TextEditingController` is a controller used for an editable text field, When the text field updates value from the user, the controller norifies its listeners and take the text from the text field.
+`TextEditingController` is a controller used for an editable text field. When the text field updates value from the user, the controller norifies its listeners and take the text from the text field.
 
 ```dart
 TextEditingController _controller = TextEditingController()
@@ -81,7 +81,7 @@ class _FormImageState extends State<FormImage> {
 Explanation:
 
 - We have one `TextField` to put our answer and we assigned it into `_controller` as `TextEditingController`
-- When we clicked the `ElevatedButton` the text value from `TextField` by using its controller will be assigned into variable `answer`.
+- When we clicked the `ElevatedButton`, the text value from `TextField` by using its controller will be assigned into variable `answer`.
 
 **Full code**
 
@@ -257,7 +257,7 @@ Explanation:
 
 - Validator checks whether the value is empty or not.
 
-Let's replace `TextEditingController` and `TextField` widgets with `Form` and `TextFormField` widgets from app before.
+Let's replace `TextEditingController` and `TextField` widgets with `Form` and `TextFormField` widgets from the app before.
 
 ```dart
 class _FormImageState extends State<FormImage> {
@@ -309,7 +309,7 @@ class _FormImageState extends State<FormImage> {
 Explanation:
 
 - `_formKey` is used as an identifier for our form. It can be used to check to validate, save, and reset at the save button
-- `TextFormField` can automatically saved the answer value to its variable by using `onSaved` method.
+- `TextFormField` can automatically save the answer value to its variable by using `onSaved` method.
 
 **Full code**
 
