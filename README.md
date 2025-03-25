@@ -10,13 +10,15 @@
 
 ### [04. Stateful and Starting the World Time App](/04.%20Stateful%20and%20Starting%20the%20World%20Time%20App/)
 
-### [05. Firebase](/05.%20Firebase/)
+### [05. Form](/05.%20Firebase/)
 
-### [06. Awesome Notifications](/06.%20Awesome%20Notifications/)
+### [06. Firebase](/06.%20Firebase/)
 
-### [07. Firebase Auth](/07.%20Firebase%20Auth/)
+### [07. Awesome Notifications](/07.%20Awesome%20Notifications/)
 
-### [08. Connecting API - Machine Learning Service](/08.%20Connecting%20API%20-%20Machine%20Learning%20Service/)
+### [08. Firebase Auth](/08.%20Firebase%20Auth/)
+
+### [09. Connecting API - Machine Learning Service](/09.%20Connecting%20API%20-%20Machine%20Learning%20Service/)
 
 ## How to Contribute - for Teaching Assistants
 
