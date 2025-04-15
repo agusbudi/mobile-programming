@@ -594,6 +594,31 @@ class MyApp extends StatelessWidget {
 
 ![gif](images/hasil.gif)
 
+If there is an error while running the app, try to replace `subproject` on `android/build.gradle` with this code.
+
+```kts
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("com.android.application") ||
+                project.plugins.hasPlugin("com.android.library")) {
+            project.android {
+                compileSdkVersion 34
+                buildToolsVersion "34.0.0"
+            }
+        }
+        if (project.hasProperty("android")) {
+            project.android {
+                if (namespace == null) {
+                    namespace project.group
+                }
+            }
+        }
+    }
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+```
+
 You can learn with other databases like Hive and ObjectBox with these references:
 
 - web article: https://blog.logrocket.com/comparing-hive-other-flutter-app-database-options & https://github.com/o-ifeanyi/db_benchmarks
