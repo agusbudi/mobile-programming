@@ -119,6 +119,8 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
 }
 ```
 
+![image-1](https://github.com/user-attachments/assets/c9ff3895-0e6d-491b-ad2a-353b5ec2f3c6)
+
 
 ## GPS
 We can access location using [`flutter_map`](https://pub.dev/packages/flutter_map) and [`location`](https://pub.dev/packages/location) plugins
@@ -255,3 +257,5 @@ class _MapWithLocationState extends State<MapWithLocation> {
   }
 }
 ```
+
+![image](https://github.com/user-attachments/assets/33b9c602-8d5e-4633-b2b9-f1db5c82222e)
