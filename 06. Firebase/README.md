@@ -30,18 +30,22 @@ Once the page loads, log in using your Google account. If you're already signed 
 
 After logging in, you’ll see the Firebase Dashboard. Find the button that says **“Add project”** or **“Create project”** and click on it to begin setting up your new project. 
 
-![image](https://github.com/user-attachments/assets/d88a3ad8-8c75-4433-baa3-8e508940abfc)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d88a3ad8-8c75-4433-baa3-8e508940abfc" height="350"/>
+</p>
 
 You’ll be asked to enter a **name** for your project — this can be anything you like, such as `flutter-notes-app`.
 
-![image](https://github.com/user-attachments/assets/c268cc5e-7c53-475c-af71-932515f1db7b)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c268cc5e-7c53-475c-af71-932515f1db7b" height="350"/>
+</p>
 
 On the next screen, you might see options to enable **Google Analytics** and **Gemini**. For now, you can skip these by turning them off. Disabling Google Analytics will make the setup process quicker and simpler.
 
-![image](https://github.com/user-attachments/assets/89d10039-9c3b-48d8-89e1-77dcf15a5663)
-
-![image](https://github.com/user-attachments/assets/b5c4fb03-9a56-4a26-81e5-0b58b9ab9568)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/89d10039-9c3b-48d8-89e1-77dcf15a5663" height="350"/>
+  <img src="https://github.com/user-attachments/assets/b5c4fb03-9a56-4a26-81e5-0b58b9ab9568" height="350"/>
+</p>
 
 ---
 
@@ -49,13 +53,15 @@ On the next screen, you might see options to enable **Google Analytics** and **G
 
 Now that your project is created, it’s time to set up the database. In the left-hand sidebar, click on **Build**, and then select **Firestore Database** from the dropdown menu.
 
-![image](https://github.com/user-attachments/assets/180fe48f-df31-45d8-89e2-07d585dcb813)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/180fe48f-df31-45d8-89e2-07d585dcb813" height="350"/>
+</p>
 
 Once you’re on the Firestore page, you’ll see a button that says **“Create database.”** Click on it to begin.
 
-![image](https://github.com/user-attachments/assets/c280124f-8ff5-42ae-a1ab-be0fa59afe99)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c280124f-8ff5-42ae-a1ab-be0fa59afe99" height="350"/>
+</p>
 
 ---
 
@@ -63,8 +69,9 @@ Once you’re on the Firestore page, you’ll see a button that says **“Create
 
 Next, Firebase will ask you to choose a location for your Firestore database. This location determines where your data is stored. For the best performance, since we're in Southeast Asia, choose **Singapore** or **Jakarta** as the region. 
 
-![image](https://github.com/user-attachments/assets/0697f005-9f2a-4727-a31e-ef3da3103e4f)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0697f005-9f2a-4727-a31e-ef3da3103e4f" height="350"/>
+</p>
 
 ---
 
@@ -72,7 +79,9 @@ Next, Firebase will ask you to choose a location for your Firestore database. Th
 
 Once your database is created, you’ll be taken to the **Security Rules** screen. Firebase will suggest using **Production Mode**, which means the database will start with stricter access by default. This is a good choice for safety, and you can change the rules later when needed.
 
-![image](https://github.com/user-attachments/assets/1f9d7dd0-315c-473c-8a85-2b0491f70689)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1f9d7dd0-315c-473c-8a85-2b0491f70689" height="350"/>
+</p>
 
 To allow your app to start writing to the database during development, you’ll need to change the default rules. Click on the **“Rules”** tab, and you’ll see a block of code like this:
 
@@ -104,7 +113,9 @@ service cloud.firestore {
 
 After editing the rules, click **“Publish”** to save the changes. You might see a warning that this setting makes your database public. That’s okay for now while we’re still learning.
 
-![image](https://github.com/user-attachments/assets/beefb6a2-7681-4d10-95a3-5873fe356b75)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/beefb6a2-7681-4d10-95a3-5873fe356b75" height="350"/>
+</p>
 
 ---
 
@@ -204,11 +215,25 @@ Save the file, and try running your app again.
 
 ## 🧩 Writing Simple CRUD with Flutter + Firebase
 
-[![Watch the tutorial](https://img.youtube.com/vi/iQOvD0y-xnw/hqdefault.jpg)](https://youtu.be/iQOvD0y-xnw)
+<div align="center">
 
-📺 [Watch the full reference tutorial on YouTube](https://youtu.be/iQOvD0y-xnw)
+  <a href="https://youtu.be/iQOvD0y-xnw" target="_blank">
+    <img src="https://img.youtube.com/vi/iQOvD0y-xnw/hqdefault.jpg" alt="Watch the tutorial" width="480">
+  </a>
+
+  <p>
+    📺 <a href="https://youtu.be/iQOvD0y-xnw" target="_blank">
+      Watch the full reference tutorial on YouTube
+    </a>
+  </p>
+
+</div>
 
 Once our project is connected to Firebase, we can start writing the actual code for the app. In this section, we’re going to build a simple note-taking app using Flutter and Firebase Firestore. The app will let users add, view, edit, and delete short notes, and all of this will be saved to the cloud using Firebase. Thanks to Firestore’s real-time database updates, changes should appear instantly. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41d34f1d-9159-448b-8172-238648002c2e" height="500"/>
+</p>
 
 This project is made up of three main Dart files:
 
@@ -332,6 +357,11 @@ Here’s what it does:
 - If it’s an **update**, it fills in the old note text.
 - When submitted, it either calls `addNote()` or `updateNote()` depending on whether a `docID` was passed.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d24ae2d5-7f7f-4d2c-b119-1290e581440e" height="500"/>
+  <img src="https://github.com/user-attachments/assets/edcef6df-2dcd-4656-be11-297de77dec22" height="500"/>
+</p>
+
 ---
 
 #### 📝 Displaying Notes
@@ -362,6 +392,10 @@ return ListView.builder(
 ```
 
 We extract the note text and document ID so we can display it and know which one to update or delete. Each note looks like this:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3bd69f74-3207-41aa-9130-a1647c79e563"/>
+</p>
 
 ```dart
 return ListTile(
