@@ -116,9 +116,7 @@ Now that you’ve finished setting up your Firebase project, it’s time to conn
 
 ### 🛠 Step 1: Install Firebase CLI & FlutterFire CLI
 
-To get started, you’ll need to install some tools so that Flutter can connect to Firebase.
-
-Open **Terminal** inside your IDE, while opening your Flutter project. Type these commands one by one:
+To get started, you’ll need to install some tools so that Flutter can connect to Firebase. Open **Terminal** inside your IDE, while opening your Flutter project. Type these commands one by one:
 
 ```bash
 npm install -g firebase-tools
@@ -132,9 +130,7 @@ Next, log into Firebase:
 firebase login
 ```
 
-After you run this, a browser window will pop up asking you to sign in to your Google account. This is the same account you used to set up your Firebase project earlier.
-
-Then, activate the FlutterFire CLI:
+After you run this, a browser window will pop up asking you to sign in to your Google account. This is the same account you used to set up your Firebase project earlier. Then, activate the FlutterFire CLI:
 
 ```bash
 flutter pub global activate flutterfire_cli
@@ -180,9 +176,7 @@ This will make sure the packages are properly downloaded and linked to your app.
 
 ### ⚠️ Step 3: Fix Android NDK Version (If You See an Error)
 
-Sometimes, you might see an error related to the **NDK version** when you build the app on Android. If that happens, here’s how to fix it.
-
-Go to this file in your Flutter project:
+Sometimes, you might see an error related to the **NDK version** when you build the app on Android. If that happens, here’s how to fix it. Go to this file in your Flutter project:
 
 ```
 android/build.gradle.kts
