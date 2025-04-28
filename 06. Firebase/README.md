@@ -199,3 +199,251 @@ android {
 ```
 
 Save the file, and try running your app again.
+
+---
+
+## 🧩 Writing Simple CRUD with Flutter + Firebase
+
+[![Watch the tutorial](https://img.youtube.com/vi/iQOvD0y-xnw/hqdefault.jpg)](https://youtu.be/iQOvD0y-xnw)
+
+📺 [Watch the full reference tutorial on YouTube](https://youtu.be/iQOvD0y-xnw)
+
+Once our project is connected to Firebase, we can start writing the actual code for the app. In this section, we’re going to build a simple note-taking app using Flutter and Firebase Firestore. The app will let users add, view, edit, and delete short notes, and all of this will be saved to the cloud using Firebase. Thanks to Firestore’s real-time database updates, changes should appear instantly. 
+
+This project is made up of three main Dart files:
+
+- `main.dart` → App entry point and Firebase setup
+- `home_page.dart` → The UI and logic for interacting with notes
+- `firestore.dart` → The service class that handles Firestore operations
+
+---
+
+### 🚀 `main.dart`: Setting Up the App
+
+This is where your Flutter app starts running. The most important part here is **initializing Firebase** properly before rendering any UI.
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
+}
+```
+
+- `WidgetsFlutterBinding.ensureInitialized();` makes sure that Flutter is ready before Firebase initializes.
+- `Firebase.initializeApp(...)` connects our app to Firebase using settings from `firebase_options.dart` (this file is auto-generated when you run `flutterfire configure`).
+- Then we launch the app with `runApp`.
+
+The UI starts with this simple widget:
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
+}
+```
+
+We’re using `HomePage()` as the first screen, which is where our notes will show up.
+
+---
+
+### 🏠 `home_page.dart`: The Notes UI
+
+This is the main page where users can add, update, and delete notes. Let’s look at the key parts.
+
+---
+
+#### 🔗 Connecting to Firestore
+
+First, we create an instance of our service class:
+
+```dart
+final FirestoreService firestoreService = FirestoreService();
+```
+
+We’ll use this to call `addNote`, `updateNote`, and `deleteNote` methods later.
+
+---
+
+#### ✍️ The Add/Update Dialog
+
+Whenever the user wants to add or update a note, we open a dialog box:
+
+```dart
+void openNoteBox({String? docID, String? existingText}) {
+  textController.text = existingText ?? '';
+
+  showDialog(
+    context: context,
+    builder: (context) => AlertDialog(
+      title: Text(docID == null ? 'Add Note' : 'Update Note'),
+      content: Form(
+        key: _formKey,
+        child: TextFormField(
+          controller: textController,
+          autofocus: true,
+          decoration: InputDecoration(hintText: 'Enter your note here'),
+          validator: (value) {
+            if (value == null || value.trim().isEmpty) {
+              return 'Please enter some text';
+            }
+            return null;
+          },
+        ),
+      ),
+      actions: [
+        ElevatedButton(
+          onPressed: () {
+            if (_formKey.currentState!.validate()) {
+              final text = textController.text.trim();
+              Navigator.pop(context);
+
+              // Decide whether to add or update
+              if (docID == null) {
+                firestoreService.addNote(text);
+              } else {
+                firestoreService.updateNote(docID, text);
+              }
+              // Reset the form
+              textController.clear(); 
+            }
+          },
+          child: Text(docID == null ? 'Add' : 'Update'),
+        ),
+      ],
+    ),
+  ).then((_) {
+    // Reset if user taps outside dialog
+    textController.clear(); 
+  });
+}
+```
+
+Here’s what it does:
+
+- Shows a dialog with a text field.
+- If it’s an **update**, it fills in the old note text.
+- When submitted, it either calls `addNote()` or `updateNote()` depending on whether a `docID` was passed.
+
+---
+
+#### 📝 Displaying Notes
+
+We use a `StreamBuilder` to **automatically update the list of notes**:
+
+```dart
+body: StreamBuilder(
+  stream: firestoreService.getNotesStream(),
+  builder: (context, snapshot) {
+    if (snapshot.hasData) {
+      List notesList = snapshot.data!.docs;
+```
+
+- `getNotesStream()` gives us live updates from Firestore.
+- Every time a note is added, updated, or deleted, the UI will refresh.
+
+Inside the list builder:
+
+```dart
+return ListView.builder(
+  itemCount: notesList.length,
+  itemBuilder: (context, index) {
+    DocumentSnapshot document = notesList[index];
+    String docID = document.id;
+    Map<String, dynamic> data = document.data() as Map<String, dynamic>;
+    String noteText = data['note'];
+```
+
+We extract the note text and document ID so we can display it and know which one to update or delete. Each note looks like this:
+
+```dart
+return ListTile(
+  title: Text(noteText),
+  trailing: Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      IconButton(
+        icon: Icon(Icons.settings),
+        onPressed: () => openNoteBox(docID: docID, existingText: noteText),
+      ),
+      IconButton(
+        icon: Icon(Icons.delete),
+        onPressed: () => firestoreService.deleteNote(docID),
+      ),
+    ],
+  ),
+);
+```
+
+It simply consists of:
+- The note's text.
+- One button to edit.
+- One button to delete.
+
+---
+
+### 🔧 `firestore.dart`: Firebase Service Code
+
+This file handles communication to Firestore, so we don’t clutter the UI code. 
+
+---
+
+#### 📌 Add a Note
+
+```dart
+Future<void> addNote(String note) {
+  return notes.add({
+    'note': note,
+    'timestamp': Timestamp.now(),
+  });
+}
+```
+
+- Adds a new note to the `notes` collection.
+- Also stores the current timestamp so we can sort later.
+
+---
+
+#### 🔁 Get Notes as a Stream
+
+```dart
+Stream<QuerySnapshot> getNotesStream() {
+  return notes.orderBy('timestamp', descending: true).snapshots();
+}
+```
+
+- This gives us real-time updates whenever the data changes.
+
+---
+
+#### ✏️ Update a Note
+
+```dart
+Future<void> updateNote(String docID, String newNote) {
+  return notes.doc(docID).update({
+    'note': newNote,
+    'timestamp': Timestamp.now(),
+  });
+}
+```
+
+- Updates the text and updates the timestamp (so the note moves to the top).
+
+---
+
+#### 🗑 Delete a Note
+
+```dart
+Future<void> deleteNote(String docID) {
+  return notes.doc(docID).delete();
+}
+```
+
+- Deletes the note with the given document ID.
