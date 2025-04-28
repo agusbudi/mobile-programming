@@ -2,14 +2,6 @@
 
 [Previous](/05.%20Form/) | [Main Page](/) | [Next](/07.%20Awesome%20Notifications/)
 
-## Content Outline
-
-- [Forms](#forms)
-  - [TextField](#textfield)
-  - [TextEditingController](#TextEditingController)
-  - [Form Widget](#form-widget)
-
-
 ## 🔥 Setting Up Firebase Console for Your Flutter App
 
 Before you can connect your Flutter app to Firebase, you need to set up your project on the Firebase Console. This process is very straightforward, you’ll only need a Google account.
