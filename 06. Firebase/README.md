@@ -30,9 +30,18 @@ Once the page loads, log in using your Google account. If you're already signed 
 
 After logging in, you’ll see the Firebase Dashboard. Find the button that says **“Add project”** or **“Create project”** and click on it to begin setting up your new project. 
 
+![image](https://github.com/user-attachments/assets/d88a3ad8-8c75-4433-baa3-8e508940abfc)
+
 You’ll be asked to enter a **name** for your project — this can be anything you like, such as `flutter-notes-app`.
 
+![image](https://github.com/user-attachments/assets/c268cc5e-7c53-475c-af71-932515f1db7b)
+
 On the next screen, you might see options to enable **Google Analytics** and **Gemini**. For now, you can skip these by turning them off. Disabling Google Analytics will make the setup process quicker and simpler.
+
+![image](https://github.com/user-attachments/assets/89d10039-9c3b-48d8-89e1-77dcf15a5663)
+
+![image](https://github.com/user-attachments/assets/b5c4fb03-9a56-4a26-81e5-0b58b9ab9568)
+
 
 ---
 
@@ -40,15 +49,22 @@ On the next screen, you might see options to enable **Google Analytics** and **G
 
 Now that your project is created, it’s time to set up the database. In the left-hand sidebar, click on **Build**, and then select **Firestore Database** from the dropdown menu.
 
+![image](https://github.com/user-attachments/assets/180fe48f-df31-45d8-89e2-07d585dcb813)
+
+
 Once you’re on the Firestore page, you’ll see a button that says **“Create database.”** Click on it to begin.
+
+![image](https://github.com/user-attachments/assets/c280124f-8ff5-42ae-a1ab-be0fa59afe99)
+
 
 ---
 
 ### 🟢 Step 4: Choose the Firestore Location
 
-Next, Firebase will ask you to choose a location for your Firestore database. This location determines where your data is stored.
+Next, Firebase will ask you to choose a location for your Firestore database. This location determines where your data is stored. For the best performance, since we're in Southeast Asia, choose **Singapore** or **Jakarta** as the region. 
 
-For the best performance, since we're in Southeast Asia, choose **Singapore** or **Jakarta** as the region. 
+![image](https://github.com/user-attachments/assets/0697f005-9f2a-4727-a31e-ef3da3103e4f)
+
 
 ---
 
@@ -56,9 +72,9 @@ For the best performance, since we're in Southeast Asia, choose **Singapore** or
 
 Once your database is created, you’ll be taken to the **Security Rules** screen. Firebase will suggest using **Production Mode**, which means the database will start with stricter access by default. This is a good choice for safety, and you can change the rules later when needed.
 
-To allow your app to start writing to the database during development, you’ll need to change the default rules.
+![image](https://github.com/user-attachments/assets/1f9d7dd0-315c-473c-8a85-2b0491f70689)
 
-Click on the **“Rules”** tab, and you’ll see a block of code like this:
+To allow your app to start writing to the database during development, you’ll need to change the default rules. Click on the **“Rules”** tab, and you’ll see a block of code like this:
 
 ```js
 rules_version = '2';
@@ -86,13 +102,9 @@ service cloud.firestore {
 }
 ```
 
-- After editing the rules, click **“Publish”** to save the changes.
+After editing the rules, click **“Publish”** to save the changes. You might see a warning that this setting makes your database public. That’s okay for now while we’re still learning.
 
-You might see a warning that this setting makes your database public. That’s okay for now while we’re still learning.
-
----
-
-Absolutely! Let's continue with the **Flutter & Android Studio integration** section — keeping the tone friendly and beginner-friendly, with more detailed code snippets and explanations.
+![image](https://github.com/user-attachments/assets/beefb6a2-7681-4d10-95a3-5873fe356b75)
 
 ---
 
