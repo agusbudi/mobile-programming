@@ -417,11 +417,17 @@ It simply consists of:
 
 ### 🔧 `firestore.dart`: Firebase Service Code
 
-This file handles communication to Firestore, so we don’t clutter the UI code. Here's how our database look like in the Firestore menu inside Firebase Console.
+This file handles communication to Firestore, so we don’t clutter the UI code. Here's how your database should look like in the Firestore menu inside Firebase Console.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/41bf3883-e028-4880-9139-68263ca709ac" height="500"/>
 </p>
+
+The Firestore Service contains 4 functionalities:
+- Add (Create)
+- Get (Read)
+- Update
+- Delete
 
 ---
 
