@@ -223,10 +223,6 @@ Save the file, and try running your app again.
 
 Once our project is connected to Firebase, we can start writing the actual code for the app. In this section, we’re going to build a simple note-taking app using Flutter and Firebase Firestore. The app will let users add, view, edit, and delete short notes, and all of this will be saved to the cloud using Firebase. Thanks to Firestore’s real-time database updates, changes should appear instantly. 
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/41d34f1d-9159-448b-8172-238648002c2e" height="500"/>
-</p>
-
 This project is made up of three main Dart files:
 
 - `main.dart` → App entry point and Firebase setup
@@ -358,6 +354,10 @@ Here’s what it does:
 
 #### 📝 Displaying Notes
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41d34f1d-9159-448b-8172-238648002c2e" height="500"/>
+</p>
+
 We use a `StreamBuilder` to **automatically update the list of notes**:
 
 ```dart
@@ -417,7 +417,11 @@ It simply consists of:
 
 ### 🔧 `firestore.dart`: Firebase Service Code
 
-This file handles communication to Firestore, so we don’t clutter the UI code. 
+This file handles communication to Firestore, so we don’t clutter the UI code. Here's how our database look like in the Firestore menu inside Firebase Console.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41bf3883-e028-4880-9139-68263ca709ac" height="500"/>
+</p>
 
 ---
 
