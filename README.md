@@ -12,13 +12,19 @@
 
 ### [05. Form](/05.%20Form/)
 
-### [06. Firebase](/06.%20Firebase/)
+### [06. CRUD Local Database](/06.%20CRUD%20Local%20Database/)
 
-### [07. Awesome Notifications](/07.%20Awesome%20Notifications/)
+### [07. Relational Database](/07.%20Relational%20Database/)
 
-### [08. Firebase Auth](/08.%20Firebase%20Auth/)
+### [08. Firebase](/08.%20Firebase/)
 
-### [09. Connecting API - Machine Learning Service](/09.%20Connecting%20API%20-%20Machine%20Learning%20Service/)
+### [09. Firebase Auth](/09.%20Firebase%20Auth/)
+
+### [10. Awesome Notifications](/10.%20Awesome%20Notifications/)
+
+### [11. Connecting API - Machine Learning Service](/11.%20Connecting%20API%20-%20Machine%20Learning%20Service/)
+
+### [12. Access Resources](/12.%20Access%20Resources/)
 
 ## How to Contribute - for Teaching Assistants
 
