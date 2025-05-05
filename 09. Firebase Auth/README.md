@@ -4,6 +4,12 @@
 
 ## Content Outline
 
+- [Local Setup](#local-setup)
+- [Create a Firebase Project](#create-a-firebase-project)
+- [Set Up Firebase Authentication](#set-up-firebases-authentication)
+- [Flutter Implementation](#flutter-implementation)
+- [User Management](#user-management)
+
 ## Local Setup
 
 To use Firebase service, you need to log in to your Firebase account in your terminal using Firebase CLI. Firebase CLI can be installed using the following command:
