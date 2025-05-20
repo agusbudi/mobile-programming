@@ -4,6 +4,10 @@
 
 In this module, you’ll build a **Flutter mobile app** that connects to a **FastAPI backend** hosted on Hugging Face Spaces. You’ll send user input (age, BMI, etc.) and get back a prediction of insurance cost.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2a64941a-4da3-4159-8678-3881c3c47b09" height="350"/>
+</p>
+
 ---
 
 ## 🧱 Tools Used
