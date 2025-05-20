@@ -693,3 +693,17 @@ if (result != null)
 - If the API doesn't respond, open it once in a browser to wake it up.
 - Make sure your BMI uses a dot (`23.4` not `23,4`)
 - Watch for typos in field names—backend expects specific keys.
+
+---
+
+## 🎥 Additional References: AI API Integration in Flutter
+
+Here are some video tutorials that show how to integrate AI or API services into Flutter apps. 
+
+| Video                                                                                                   | Description                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Video 1](https://img.youtube.com/vi/cXxB_mzOShI/0.jpg)](https://www.youtube.com/watch?v=cXxB_mzOShI) | **Add Any AI to Flutter in 5 Minutes (ChatGPT, Claude, Gemini)**<br>In this video, you learn how to quickly integrate any AI model—including ChatGPT, Claude, or Gemini—into your Flutter app using the OpenRouter API, with step-by-step guidance on setup, API key management, and switching between different AI models for testing and deployment. |
+| [![Video 2](https://img.youtube.com/vi/26BTR8yR3-M/0.jpg)](https://www.youtube.com/watch?v=26BTR8yR3-M) | **(Claude API) 📱 Image-to-Text App • Flutter Tutorial**<br>This video is a step-by-step Flutter tutorial demonstrating how to build an AI-powered image-to-text app using Anthropic’s Claude API, guiding viewers through setting up image picking, API integration, permissions, and UI so users can take or select a photo and receive an AI-generated description of the image.    |
+| [![Video 3](https://img.youtube.com/vi/nv76JCWIZc0/0.jpg)](https://www.youtube.com/watch?v=nv76JCWIZc0) | **📱 AI Chat Bot • Claude x Flutter Tutorial**<br>This video provides a step-by-step tutorial on building an AI chat app in Flutter using Anthropic's Claude API, demonstrating how to integrate the API and use the Provider package for state management.   |
+
+---
